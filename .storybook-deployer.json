@@ -1,0 +1,16 @@
+{
+  "apiUrl": "https://storybook-deployment-service.epinnock.workers.dev/",
+  "verbose": true,
+  "apiKey": "",
+  "dir": "./storybook-static",
+  "project": "sample-project-id",
+  "version": "v0.0.1",
+  "withAnalysis": false,
+  "screenshotsDir": "./__screenshots__",
+  "storybookUrl": "http://localhost:6006/",
+  "storycapOptions": {
+    "chromiumPath": "",
+    "outDir": "./__screenshots__",
+    "omitBackground": true
+  }
+}

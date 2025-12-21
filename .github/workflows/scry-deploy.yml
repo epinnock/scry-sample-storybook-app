@@ -1,0 +1,35 @@
+name: Scry Deployment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+          
+      - name: Install dependencies
+        run: pnpm install
+        
+      - name: Build Storybook
+        run: pnpm run build-storybook
+        
+      - name: Deploy to Scry
+        run: pnpm dlx @jules/storybook-deployer deploy --api-key ${{ secrets.SCRY_API_KEY }}
+        env:
+          SCRY_API_KEY: ${{ secrets.SCRY_API_KEY }}
