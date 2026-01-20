@@ -1,16 +1,8 @@
 {
-  "apiUrl": "https://storybook-deployment-service.epinnock.workers.dev/",
-  "verbose": true,
-  "apiKey": "",
+  "apiUrl": "https://storybook-deployment-service.epinnock.workers.dev",
+  "project": "4vR5UXbUIgCVHaMm7spu",
   "dir": "./storybook-static",
-  "project": "sample-project-id",
-  "version": "v0.0.1",
-  "withAnalysis": false,
-  "screenshotsDir": "./__screenshots__",
-  "storybookUrl": "http://localhost:6006/",
-  "storycapOptions": {
-    "chromiumPath": "",
-    "outDir": "./__screenshots__",
-    "omitBackground": true
-  }
+  "version": "latest",
+  "verbose": false,
+  "apiKey": "scry_proj_4vR5UXbUIgCVHaMm7spu_JHsRI-Zwpm1bAQwhKcYiSyMUYD03b25TKjslw2LPAQ8"
 }
