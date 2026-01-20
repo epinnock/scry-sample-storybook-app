@@ -1,0 +1,224 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-01-10T23:56:32.919Z",
+  "git": {
+    "commitSha": "839b1ecbaa02d2e27d9c8d8d751e2df970d4f924",
+    "branch": "main",
+    "baseBranch": "main",
+    "baseCommitSha": "839b1ecbaa02d2e27d9c8d8d751e2df970d4f924"
+  },
+  "config": {
+    "include": [
+      "src/**/*.tsx",
+      "src/**/*.jsx"
+    ],
+    "exclude": [
+      "**/*.test.tsx",
+      "**/*.spec.tsx",
+      "**/*.test.jsx",
+      "**/*.spec.jsx",
+      "**/index.tsx",
+      "**/index.jsx",
+      "**/__mocks__/**",
+      "**/__tests__/**"
+    ],
+    "storyPatterns": [
+      "**/*.stories.tsx",
+      "**/*.stories.ts",
+      "**/*.stories.jsx",
+      "**/*.stories.js"
+    ],
+    "newCodeAnalysis": true,
+    "baseBranch": "main",
+    "thresholds": {
+      "componentCoverage": 80,
+      "propCoverage": 70,
+      "variantCoverage": 60,
+      "newCodeCoverage": 90
+    }
+  },
+  "summary": {
+    "totalComponents": 1,
+    "componentsWithStories": 1,
+    "componentsWithoutStories": 0,
+    "totalStoryFiles": 4,
+    "totalStories": 10,
+    "metrics": {
+      "componentCoverage": 100,
+      "propCoverage": 66.66666666666666,
+      "variantCoverage": 100,
+      "scenarioCoverage": 100
+    },
+    "health": {
+      "status": "not_executed",
+      "passingStories": 0,
+      "failingStories": 0,
+      "passRate": 0
+    }
+  },
+  "newCode": {
+    "enabled": true,
+    "since": "main (839b1ec)",
+    "newComponents": {
+      "total": 0,
+      "withStories": 0,
+      "withoutStories": 0,
+      "coverage": 100
+    },
+    "modifiedComponents": {
+      "total": 0,
+      "newPropsAdded": 0,
+      "newPropsCovered": 0,
+      "coverage": 100
+    },
+    "newComponentPaths": [],
+    "modifiedComponentPaths": []
+  },
+  "execution": null,
+  "components": [
+    {
+      "filePath": "/home/boxuser/scry/scry-sample-storybook-app/src/components/Button.tsx",
+      "relativePath": "src/components/Button.tsx",
+      "componentName": "Button",
+      "componentType": "function",
+      "storyFile": "src/components/Button.stories.tsx",
+      "hasStories": true,
+      "storyCount": 2,
+      "storyNames": [
+        "Primary",
+        "Secondary"
+      ],
+      "props": [
+        {
+          "name": "label",
+          "type": "string",
+          "required": true,
+          "hasDefault": false,
+          "defaultValue": null,
+          "description": null,
+          "isCovered": true,
+          "coveredBy": [
+            "Primary",
+            "Secondary"
+          ],
+          "variants": null,
+          "isNew": false
+        },
+        {
+          "name": "primary",
+          "type": "boolean | undefined",
+          "required": true,
+          "hasDefault": false,
+          "defaultValue": null,
+          "description": null,
+          "isCovered": true,
+          "coveredBy": [
+            "Primary",
+            "Secondary"
+          ],
+          "variants": {
+            "type": "boolean",
+            "totalVariants": 2,
+            "coveredVariants": 2,
+            "coverage": 100,
+            "values": [
+              {
+                "value": "false",
+                "isCovered": true,
+                "coveredBy": [
+                  "Secondary"
+                ]
+              },
+              {
+                "value": "true",
+                "isCovered": true,
+                "coveredBy": [
+                  "Primary"
+                ]
+              }
+            ]
+          },
+          "isNew": false
+        },
+        {
+          "name": "onClick",
+          "type": "(() => void) | undefined",
+          "required": true,
+          "hasDefault": false,
+          "defaultValue": null,
+          "description": null,
+          "isCovered": false,
+          "coveredBy": [],
+          "variants": null,
+          "isNew": false
+        }
+      ],
+      "scenarios": [],
+      "coverage": {
+        "propCoverage": 66.66666666666666,
+        "variantCoverage": 100,
+        "scenarioCoverage": 100,
+        "overallScore": 86.66666666666666
+      },
+      "health": {
+        "totalStories": 2,
+        "passing": 0,
+        "failing": 0,
+        "skipped": 0,
+        "status": "unknown"
+      },
+      "changeStatus": {
+        "status": "unchanged",
+        "linesAdded": 0,
+        "linesModified": 0,
+        "newProps": []
+      }
+    }
+  ],
+  "missingScenarios": [
+    {
+      "componentName": "Button",
+      "componentPath": "src/components/Button.tsx",
+      "description": "Required prop 'onClick' is not explicitly tested",
+      "reason": "required_prop_uncovered",
+      "priority": "medium",
+      "suggestedArgs": {},
+      "suggestedStoryName": "WithOnclick",
+      "affectsNewCode": false
+    }
+  ],
+  "uncoveredComponents": [],
+  "qualityGate": {
+    "passed": false,
+    "checks": [
+      {
+        "name": "Component Coverage",
+        "threshold": 80,
+        "actual": 100,
+        "passed": true,
+        "message": "100.0% >= 80% threshold"
+      },
+      {
+        "name": "Prop Coverage",
+        "threshold": 70,
+        "actual": 66.66666666666666,
+        "passed": false,
+        "message": "66.7% < 70% threshold"
+      },
+      {
+        "name": "Variant Coverage",
+        "threshold": 60,
+        "actual": 100,
+        "passed": true,
+        "message": "100.0% >= 60% threshold"
+      },
+      {
+        "name": "New Code Coverage",
+        "threshold": 90,
+        "actual": 100,
+        "passed": true,
+        "message": "100.0% >= 90% threshold"
+      }
+    ]
+  }
+}

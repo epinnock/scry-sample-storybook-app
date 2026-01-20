@@ -1,6 +1,7 @@
 {
   "name": "scry-sample-storybook-app",
   "version": "1.0.0",
+  "type": "module",
   "description": "This is a simple react app that demonstrates how to use Scry with Storybook.",
   "main": "index.js",
   "scripts": {
