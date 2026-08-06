@@ -3,7 +3,7 @@ import React from 'react';
 interface ButtonProps {
   label: string;
   primary?: boolean;
-  onClick?: () => void;
+  onClick?: (() => void) | undefined;
 }
 
 export const Button: React.FC<ButtonProps> = ({ label, primary, onClick }) => {

@@ -4,7 +4,10 @@ import { fn } from '@storybook/test';
 import { Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
+// Annotated explicitly: the inferred type of fn() from @storybook/test
+// reaches into a pnpm-internal @vitest/spy path, which TS2742 rejects as
+// non-portable.
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
   parameters: {

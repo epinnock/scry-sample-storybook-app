@@ -6,13 +6,13 @@ export interface ModalProps {
   /** Heading shown at the top of the dialog */
   title: string;
   /** Optional supporting line under the title */
-  description?: string;
+  description?: string | undefined;
   /** Dialog body */
-  children?: React.ReactNode;
+  children?: React.ReactNode | undefined;
   /** Footer content, normally action buttons */
-  footer?: React.ReactNode;
+  footer?: React.ReactNode | undefined;
   /** Called when the close control or the backdrop is pressed */
-  onClose?: () => void;
+  onClose?: (() => void) | undefined;
 }
 
 /**
