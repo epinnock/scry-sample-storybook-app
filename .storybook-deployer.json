@@ -1,8 +1,7 @@
 {
   "apiUrl": "https://storybook-deployment-service.epinnock.workers.dev",
-  "project": "4vR5UXbUIgCVHaMm7spu",
+  "project": "U9m2H2yeC9wFiR4hlMta",
   "dir": "./storybook-static",
   "version": "latest",
-  "verbose": false,
-  "apiKey": "scry_proj_4vR5UXbUIgCVHaMm7spu_JHsRI-Zwpm1bAQwhKcYiSyMUYD03b25TKjslw2LPAQ8"
+  "verbose": false
 }
