@@ -18,7 +18,7 @@ export interface PricingCardProps {
   /** Label for the call-to-action button */
   ctaLabel?: string;
   /** Called when the call-to-action button is pressed */
-  onSelect?: () => void;
+  onSelect?: (() => void) | undefined;
 }
 
 /**

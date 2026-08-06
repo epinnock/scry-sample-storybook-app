@@ -7,7 +7,13 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
+    // "preserve" + bundler resolution: this project is built by Vite via
+    // Storybook, which resolves extensionless relative imports. "nodenext"
+    // required explicit .js extensions and reported TS2835 on every file in
+    // the repo — including untouched ones — which made typechecking unusable
+    // as a gate, so nobody ran it (ISSUES.md #10).
+    "module": "preserve",
+    "moduleResolution": "bundler",
     "target": "esnext",
     "types": [],
     // For nodejs:

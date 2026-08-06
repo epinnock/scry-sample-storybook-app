@@ -3,7 +3,10 @@ import { fn } from '@storybook/test';
 
 import { Header } from './Header';
 
-const meta = {
+// Annotated explicitly: the inferred type of fn() from @storybook/test
+// reaches into a pnpm-internal @vitest/spy path, which TS2742 rejects as
+// non-portable.
+const meta: Meta<typeof Header> = {
   title: 'Example/Header',
   component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
