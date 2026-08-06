@@ -38,3 +38,8 @@ screenshots/
 # component through Scry, so this must not be checked in.
 src/components/AccountUpgradePanel.tsx
 src/components/AccountUpgradePanel.stories.tsx
+
+# Local deployer config. Untracked because it previously held a raw API key
+# and was committed. Copy .storybook-deployer.example.json and fill it in, or
+# pass --api-key / SCRY_API_KEY instead.
+.storybook-deployer.json
