@@ -24,7 +24,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 9
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -60,3 +60,5 @@ jobs:
           STORYBOOK_DEPLOYER_PROJECT: ${{ vars.SCRY_PROJECT_ID }}
           STORYBOOK_DEPLOYER_API_KEY: ${{ secrets.SCRY_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Run coverage with the current published sbcov (records the repository URL)
+          SCRY_SBCOV_CMD: npx -y @scrymore/scry-sbcov@latest
