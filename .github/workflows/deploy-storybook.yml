@@ -34,12 +34,18 @@ jobs:
       - name: Build Storybook
         run: pnpm run build-storybook
 
+      - name: Install Playwright browser
+        # --with-analysis captures story screenshots; without a browser nothing
+        # is indexed (matches the current scry-deployer workflow template).
+        run: pnpm dlx playwright install --with-deps chromium-headless-shell
+
       - name: Deploy to Scry
         run: |
           npx @scrymore/scry-deployer \
             --dir ./storybook-static \
             ${{ vars.SCRY_COVERAGE_ENABLED == 'false' && '--no-coverage' || '' }} \
             ${{ vars.SCRY_COVERAGE_FAIL_ON_THRESHOLD == 'true' && '--coverage-fail-on-threshold' || '' }} \
+            --with-analysis \
             --coverage-base ${{ vars.SCRY_COVERAGE_BASE || 'main' }}
         env:
           STORYBOOK_DEPLOYER_API_URL: ${{ vars.SCRY_API_URL }}
